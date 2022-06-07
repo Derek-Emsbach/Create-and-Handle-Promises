@@ -12,7 +12,15 @@ function stretch() {
 }
 
 function runOnTreadmill() {
-  // Your code here
+  const newP =  new Promise((resolved, rejected) =>{
+    setTimeout(()=>{
+       resolved('done running on treadmill')
+  }, 500)
+
+  })
+  newP.then((resolved)=>{
+      console.log(resolved)
+  })
 }
 
 function liftWeights() {
@@ -21,7 +29,8 @@ function liftWeights() {
 
 function workout() {
   // Your code here
-  stretch()
+  stretch();
+  runOnTreadmill();
 }
 
 
