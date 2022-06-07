@@ -24,13 +24,22 @@ function runOnTreadmill() {
 }
 
 function liftWeights() {
-  // Your code here
+  const newP =  new Promise((resolved) =>{
+    setTimeout(()=>{
+       resolved('done lifting weights')
+  }, 2000)
+
+  })
+  newP.then((resolved)=>{
+      console.log(resolved)
+  })
 }
 
 function workout() {
   // Your code here
   stretch();
   runOnTreadmill();
+  liftWeights();
 }
 
 
